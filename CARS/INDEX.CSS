@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Racing+Sans+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #07c3e0;
+}
+
+body {
+    background: #000000;
+    font-family: "Racing Sans One", serif;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    z-index: 1000;
+
+}
+
+header::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100px;
+    height: 5px;
+    width: 40%;
+    background: linear-gradient(90deg, var(--primary), transparent);
+}
+
+.logo {
+    font-size: 24px;
+    color: #ffffff;
+}
+
+.logo img {
+    max-width: 200px;
+    filter: invert(1);
+}
+
+header .year {
+    font-family: "Racing Sans One", cursive;
+    font-size: 1em;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 800;
+    margin-top: 40px;
+}
+
+header .menu {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    background: url(menu-3-fill.png) no-repeat center center;
+    background-size: 30px;
+    filter: invert(1);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+header .menu.active {
+    height: 35px;
+    width: 35px;
+    background: url(close-line.png) no-repeat center center;
+    background-size: 35px;
+    filter: invert(1);
+}
+
+.nav {
+    z-index: 200;
+    position: absolute;
+    right: 100px;
+    top: 0;
+    width: 30%;
+    height: 5px;
+    border-bottom: 5px solid transparent;
+    background: transparent;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    transform-origin: right;
+}
+
+.nav.active {
+    top: 100px;
+    width: 40%;
+    height: 60px;
+    border-top: 5px solid transparent;
+    border-image: linear-gradient(90deg, transparent, var(--primary) 50%, transparent) 1;
+    border-bottom: none;
+}
+
+.nav li {
+    list-style-type: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0s 0.5s;
+}
+
+.nav.active li {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s ease, visibility 0s;
+}
+
+.nav li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    transition: 0.2s;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px;
+}
+
+.nav li a:hover {
+    color: var(--primary);
+    box-shadow: inset 0 0 20px rgba(0, 194, 222, 0.5);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 140vh;
+    padding: 0 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.banner::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.9)
+    );
+}
+
+.banner::before {
+    position: absolute;
+    content: '';
+    top: 25%;
+    left: 0;
+    width: 5px;
+    height: 40%;
+    background: linear-gradient(var(--primary), transparent);
+}
+
+.banner .bg-video {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner .bg-video.active {
+    display: block;
+}
+
+.banner .content {
+    position: relative;
+    max-width: 900px;
+    padding-bottom: 200px;
+    z-index: 100;
+}
+
+.banner .content h1 {
+    font-family: "Racing Sans One", serif;
+    font-size: 8vw;
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 0.8em;
+    letter-spacing: 5px;
+}
+
+.banner .content .model {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: var(--primary);
+    display: none;
+}
+
+.banner .content .model.active {
+    display: block;
+}
+
+.banner .content p {
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.banner .content a {
+    position: relative;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 60px;
+    background: transparent;
+    border-bottom: 3px solid;
+    border-image: linear-gradient(90deg, transparent, var(--primary), transparent) 30;
+    box-shadow: inset 0 0 10px rgba(0, 194, 222, 0.5);
+    backdrop-filter: blur(20px);
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.banner .content a:hover {
+    box-shadow: inset 0 0 40px rgba(0, 194, 222, 0.5);
+}
+
+.banner .screen {
+    position: absolute;
+    right: 5%;
+    bottom: 30px;
+    width: 200px;
+    height: 150px;
+    transform-style: preserve-3d;
+    perspective: 3000px;
+    animation: animate 30s linear infinite;
+    z-index: 50;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.screen div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    transform-style: preserve-3d;
+}
+
+.screen div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(transparent, var(--primary));
+    transform: rotateY(calc(90deg * var(--i))) translateZ(100px);
+}
+
+.shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 200px;
+    background: var(--primary);
+    transform: rotateX(-90deg) translateZ(150px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(0, 194, 222, 0.2),
+                0 0 120px rgba(0, 194, 222, 0.4),
+                0 0 120px rgba(0, 194, 222, 0.6),
+                0 0 120px rgba(0, 194, 222, 0.8),
+                0 0 120px rgba(0, 194, 222, 0.1);
+}
+
+.screen div span video {
+    position: absolute;
+    bottom: 0;
+    height: 75%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.5s;
+}
+
+.trailer {
+    display: none;
+}
+
+.trailer.active {
+    display: block;
+}
+
+.banner .gallery .carousel {
+    position: absolute;
+    left: 100px;
+    bottom: -80px;
+    width: ;
+    height: 40%;
+    margin-bottom: 50px;
+    max-width: 800px;
+    z-index: 100;
+    background: transparent;
+    backdrop-filter: blur(0px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .gallery::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: 0;
+    height: 20px;
+    width: 150%;
+    background: var(--primary);
+    filter: blur(15px);
+}
+
+.carousel .carousel-item {
+    width: 250px;
+    cursor: pointer;
+}
+
+.carousel .carousel-item img {
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel .carousel-item h4 {
+    text-align: center;
+    color: var(--primary);
+    font-size: 1.3em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.sci {
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.sci li a:hover {
+    color: var(--primary);
+}
+
+ 

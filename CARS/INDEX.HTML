@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+    <link rel="stylesheet" href="INDEX.CSS">
+    <title>McLAREN | Sports Car Website Landing Page</title>
+</head>
+
+<body>
+    <header>
+        <span class="year">2018 = 2023</span>
+        <a href="/" class="logo">
+            <img src="logo (1).png" alt="McLaren Logo">
+        </a>
+        <a href="#" class="menu" onclick="toggleMenu();"></a>
+    </header>
+
+    <div class="banner">
+        <ul class="nav">
+            <li><a href="#">Supercars</a></li>
+            <li><a href="#">GT</a></li>
+            <li><a href="#">Ultimate</a></li>
+            <li><a href="#">Solus</a></li>
+            <li><a href="#">Legacy</a></li>
+        </ul>
+
+        <div class="bg-video-list">
+            <video class="bg-video mclaren-1 active" src="videos/mclaren-5.mp4" type="video/mp4" autoplay loop>
+                Your browser does not support the video tag.
+            </video>
+            <video class="bg-video mclaren-2 active" src="videos/mclaren-2.mp4" type="video/mp4" controls autoplay muted
+                loop>
+                Your browser does not support the video tag.
+            </video>
+            <video class="bg-video mclaren-3 active" src="videos/mclaren-3.mp4" type="video/mp4" controls autoplay muted
+                loop>
+                Your browser does not support the video tag.
+            </video>
+            <video class="bg-video mclaren-4 active" src="videos/mclaren-4.mp4" type="video/mp4" controls autoplay muted
+                loop>
+                Your browser does not support the video tag.
+            </video>
+            <video class="bg-video mclaren-5 active" src="videos/mclaren-1.mp4" type="video/mp4" controls autoplay muted
+                loop>
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+        <div class="content">
+            <h1>McLAREN</h1>
+            <h3 class="model mclaren-1 active"> 76SLT SPIDER</h3>
+            <h3 class="model mclaren-2" style="color: #92ff00">ARTURA</h3>
+            <h3 class="model mclaren-3" style="color: #ff0015">7505</h3>
+            <h3 class="model mclaren-4" style="color: #ff2e00">765LT</h3>
+            <h3 class="model mclaren-5" style="color: #bbc0dd">7505 SPIDER</h3>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+                Recusandae totam alias, optio quibusdam delectus quas<br>
+                eligendi impedit nulla? Repellat, alias.</p>
+            <a href="#">Enquire</a>
+            <br><br>
+        </div>
+        <div class="screen">
+            <div class="shadow"></div>
+            <div>
+                <span style="--i: 0">
+                    <video class="trailer mclaren-1 screen-video active" src="videos/mclaren-1.mp4" autoplay loop
+                        muted></video>
+
+                    <video class="trailer mclaren-2 screen-video" src="videos/mclaren-2.mp4" autoplay loop
+                        muted></video>
+
+                    <video class="trailer mclaren-3 screen-video" src="videos/mclaren-3.mp4" autoplay loop
+                        muted></video>
+
+                    <video class="trailer mclaren-4 screen-video" src="videos/mclaren-4.mp4" autoplay loop
+                        muted></video>
+
+                    <video class="trailer mclaren-5 screen-video active" src="videos/mclaren-5.mp4" autoplay loop
+                        muted></video>
+
+                </span>
+                <span style="--i: 1">
+                    <video class="screen-video" src="videos/trailer-1.mp4" autoplay loop muted></video>
+                </span>
+                <span style="--i: 2">
+                    <video class="screen-video" src="videos/trailer-2.mp4" autoplay loop muted></video>
+                </span>
+                <span style="--i: 3">
+                    <video class="screen-video" src="videos/trailer-3.mp4" autoplay loop muted></video>
+                </span>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="carousel">
+                <a class="carousel-item" href="#" onclick="changeVideo('mclaren-1');">
+                    <img src="cars/mclaren-1.jpg" alt="" />
+                    <h4>765LT SPIDER</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('mclaren-2');">
+                    <img src="cars/mclaren-2.jpg" alt="" />
+                    <h4 style="color:#92ff00">ARTURA</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('mclaren-3');">
+                    <img src="cars/mclaren-3.jpeg" alt="" />
+                    <h4 style="color: #ff0015">7505</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('mclaren-4');">
+                    <img src="cars/mclaren-4.jpeg" alt="" />
+                    <h4 style="color: #ff2e00">765LT</h4>
+                </a>
+                <a class="carousel-item" href="#" onclick="changeVideo('mclaren-5');">
+                    <img src="cars/mclaren-5.jpeg" alt="" />
+                    <h4 style="color: #bbc0dd">7505 SPIDER</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+    <ul class="sci">
+        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+        <li><a href="#"><i class="bi bi-youtube"></i></a></li>
+    </ul>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="INDEX.JS"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.carousel').carousel();
+        });
+    </script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>McLaren Footer</title>
+      <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+      <style>
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+    
+        body {
+          background: #0a0a0a;
+          font-family: 'Segoe UI', sans-serif;
+          color: #ddd;
+        }
+    
+        footer {
+          position: relative;
+          background: radial-gradient(circle at center, #111 0%, #000 100%);
+          padding: 60px 0;
+          overflow: hidden;
+        }
+    
+        footer::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0;
+          width: 100%; height: 100%;
+          background: url('https://upload.wikimedia.org/wikipedia/commons/5/5f/McLaren_logo.svg') no-repeat center;
+          background-size: 800px;
+          opacity: 0.02;
+          z-index: 0;
+        }
+    
+        .footer-inner {
+          position: relative;
+          z-index: 2;
+          max-width: 1400px;
+          margin: auto;
+          padding: 60px 30px;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          backdrop-filter: blur(16px);
+          background: rgba(255,255,255,0.1);
+          border-radius: 12px;
+          border: 1px solid rgba(255,255,255,0.1);
+          box-shadow: 0 0 40px rgba(255, 76, 0, 0.2);
+          animation: glowPulse 3s infinite ease-in-out;
+        }
+    
+        .footer-brand h1 {
+          font-size: 40px;
+          color: #ff4c00;
+          font-family: 'Orbitron', sans-serif; /* Updated Font */
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          text-shadow: 0 0 10px #ff4c00;
+        }
+    
+        .footer-brand p {
+          font-size: 14px;
+          color: #aaa;
+          margin-top: 10px;
+        }
+    
+        .footer-brand-text {
+          font-size: 50px;
+          font-weight: bold;
+          color: #ff4c00;
+          animation: glowEffect 2s infinite ease-in-out;
+        }
+    
+        @keyframes glowEffect {
+          0%, 100% {
+            text-shadow: 0 0 10px #ff4c00, 0 0 20px #ff4c00, 0 0 30px #ff4c00;
+          }
+          50% {
+            text-shadow: 0 0 15px #ff4c00, 0 0 25px #ff4c00, 0 0 35px #ff4c00;
+          }
+        }
+    
+        .footer-col {
+          flex: 1 1 200px;
+          margin-bottom: 30px;
+        }
+    
+        .footer-col h3 {
+          color: #fff;
+          margin-bottom: 15px;
+          font-size: 16px;
+          text-transform: uppercase;
+          position: relative;
+        }
+    
+        .footer-col h3::after {
+          content: '';
+          width: 40px;
+          height: 2px;
+          background: linear-gradient(to right, #ff4c00, transparent);
+          display: block;
+          margin-top: 6px;
+        }
+    
+        .footer-col ul {
+          list-style: none;
+        }
+    
+        .footer-col ul li {
+          margin: 10px 0;
+        }
+    
+        .footer-col ul li a {
+          color: #bbb;
+          text-decoration: none;
+          font-size: 14px;
+          transition: 0.3s;
+          position: relative;
+        }
+    
+        .footer-col ul li a:hover::before {
+          width: 100%;
+        }
+    
+        .footer-col ul li a:hover {
+          color: #ff4c00;
+        }
+    
+        .footer-bottom {
+          text-align: center;
+          padding: 25px 10px;
+          font-size: 13px;
+          color: #777;
+          border-top: 1px solid rgba(255,255,255,0.05);
+        }
+    
+        @keyframes glowPulse {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(255, 76, 0, 0.15);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(255, 76, 0, 0.3);
+          }
+        }
+    
+        @media (max-width: 768px) {
+          .footer-inner {
+            flex-direction: column;
+            text-align: center;
+          }
+          .footer-col, .footer-brand {
+            flex: 1 1 100%;
+          }
+        }
+      </style>
+    </head>
+    <body>
+</body>
+
+</html>
